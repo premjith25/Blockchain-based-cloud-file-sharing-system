@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload - SecureCloud Share</title>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body data-role="user">
+
+  <main class="container" style="max-width:560px;">
+    <div class="card">
+      <h2>Upload a file</h2>
+      <p>Your file is encrypted and its fingerprint (hash) is saved in the blockchain.</p>
+      <form id="uploadForm" novalidate>
+        <div class="form-row">
+          <label for="file">Choose file</label>
+          <input type="file" id="file" />
+          <span class="error-text" id="err-file"></span>
+        </div>
+        <button type="submit" class="btn">Upload</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validate.js"></script>
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (validateUpload(this)) {
+        // DEMO ONLY: Person 4 replaces this with the real upload.
+        alert("File uploaded successfully!");
+        window.location.href = "MyFiles.html";
+      }
+    });
+  </script>
+</body>
+</html>

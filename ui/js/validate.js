@@ -62,3 +62,28 @@ function validateRegister(form) {
   }
   return ok;
 }
+// ---------- Upload ----------
+function validateUpload(form) {
+  clearErrors(form);
+  var input = document.getElementById("file");
+
+  if (input.files.length === 0) {
+    setError("file", "Please choose a file to upload.");
+    return false;
+  }
+  if (input.files[0].size > 10 * 1024 * 1024) {
+    setError("file", "File is too large. Maximum size is 10 MB.");
+    return false;
+  }
+  return true;
+}
+
+// ---------- Feedback ----------
+function validateFeedback(form) {
+  clearErrors(form);
+  if (val("message").length < 10) {
+    setError("message", "Please write at least 10 characters.");
+    return false;
+  }
+  return true;
+}
