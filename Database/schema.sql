@@ -42,3 +42,15 @@ CREATE TABLE FileShares (
     CONSTRAINT FK_FileShares_Users FOREIGN KEY (SharedWithUserId) REFERENCES Users(UserId)
 );
 GO
+
+-- ActivityLogs: record of every file view and download
+CREATE TABLE ActivityLogs (
+    LogId     INT IDENTITY(1,1) PRIMARY KEY,
+    UserId    INT          NOT NULL,
+    FileId    INT          NOT NULL,
+    Action    NVARCHAR(20) NOT NULL CHECK (Action IN ('View', 'Download')),
+    LoggedAt  DATETIME     NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT FK_ActivityLogs_Users FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    CONSTRAINT FK_ActivityLogs_Files FOREIGN KEY (FileId) REFERENCES Files(FileId)
+);
+GO
