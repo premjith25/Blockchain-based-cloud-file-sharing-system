@@ -134,3 +134,7 @@ function validateChangePassword(form) {
   }
   return ok;
 }
+// ---------- Admin login ----------
+function validateAdminLogin(form) {
+  return validateLogin(form);
+}
