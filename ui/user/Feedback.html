@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback - SecureCloud Share</title>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body data-role="user">
+
+  <main class="container" style="max-width:560px;">
+    <div class="card">
+      <h2>Send feedback</h2>
+      <p>Tell us about your experience or suggest an improvement.</p>
+      <form id="feedbackForm" novalidate>
+        <div class="form-row">
+          <label for="message">Your message</label>
+          <textarea id="message" rows="5"></textarea>
+          <span class="error-text" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validate.js"></script>
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (validateFeedback(this)) {
+        // DEMO ONLY: Person 3 replaces this with saving to the Feedback table.
+        alert("Thank you for your feedback!");
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

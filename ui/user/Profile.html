@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile - SecureCloud Share</title>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body data-role="user">
+
+  <main class="container" style="max-width:520px;">
+    <div class="card">
+      <h2>My profile</h2>
+      <form id="profileForm" novalidate>
+        <div class="form-row">
+          <label for="username">Username</label>
+          <input type="text" id="username" value="asha" disabled />
+        </div>
+        <div class="form-row">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" value="Asha Kumar" />
+          <span class="error-text" id="err-fullname"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" value="asha@example.com" />
+          <span class="error-text" id="err-email"></span>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" value="9876543210" />
+          <span class="error-text" id="err-phone"></span>
+        </div>
+        <button type="submit" class="btn">Save changes</button>
+        <a href="ChangePassword.html" style="margin-left:12px;">Change password</a>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validate.js"></script>
+  <script>
+    document.getElementById("profileForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (validateProfile(this)) {
+        // DEMO ONLY: Person 3 replaces this with the real profile update.
+        alert("Profile updated successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

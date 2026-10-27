@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - SecureCloud Share</title>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body data-role="public">
+
+  <main class="container" style="max-width:480px;">
+    <div class="card">
+      <h2>Create an account</h2>
+      <form id="registerForm" novalidate>
+        <div class="form-row">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" />
+          <span class="error-text" id="err-fullname"></span>
+        </div>
+        <div class="form-row">
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+          <span class="error-text" id="err-username"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <span class="error-text" id="err-email"></span>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" />
+          <span class="error-text" id="err-phone"></span>
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+          <span class="error-text" id="err-password"></span>
+        </div>
+        <div class="form-row">
+          <label for="confirm">Confirm password</label>
+          <input type="password" id="confirm" />
+          <span class="error-text" id="err-confirm"></span>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <p>Already registered? <a href="Login.html">Login</a></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validate.js"></script>
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (validateRegister(this)) {
+        // DEMO ONLY: Person 3 replaces this with saving to the database.
+        alert("Registration successful! Please login.");
+        window.location.href = "Login.html";
+      }
+    });
+  </script>
+</body>
+</html>

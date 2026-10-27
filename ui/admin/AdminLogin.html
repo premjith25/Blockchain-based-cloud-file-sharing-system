@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Login - SecureCloud Share</title>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body data-role="public">
+
+  <main class="container" style="max-width:420px;">
+    <div class="card">
+      <h2>Admin login</h2>
+      <form id="adminLoginForm" novalidate>
+        <div class="form-row">
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+          <span class="error-text" id="err-username"></span>
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+          <span class="error-text" id="err-password"></span>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validate.js"></script>
+  <script>
+    document.getElementById("adminLoginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (validateAdminLogin(this)) {
+        // DEMO ONLY: Person 1 replaces this with the real admin check.
+        sessionStorage.setItem("username", val("username"));
+        window.location.href = "AdminUsers.html";
+      }
+    });
+  </script>
+</body>
+</html>
