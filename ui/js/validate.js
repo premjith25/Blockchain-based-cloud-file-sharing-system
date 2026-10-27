@@ -87,3 +87,50 @@ function validateFeedback(form) {
   }
   return true;
 }
+// ---------- Profile ----------
+function validateProfile(form) {
+  clearErrors(form);
+  var ok = true;
+
+  if (val("fullname").length < 3) {
+    setError("fullname", "Name must be at least 3 characters.");
+    ok = false;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val("email"))) {
+    setError("email", "Enter a valid email address.");
+    ok = false;
+  }
+  if (!/^[0-9]{10}$/.test(val("phone"))) {
+    setError("phone", "Phone must be exactly 10 digits.");
+    ok = false;
+  }
+  return ok;
+}
+
+// ---------- Change password ----------
+function validateChangePassword(form) {
+  clearErrors(form);
+  var ok = true;
+
+  var oldPass = document.getElementById("oldpass").value;
+  var newPass = document.getElementById("newpass").value;
+  var confirm = document.getElementById("confirm").value;
+
+  if (oldPass === "") {
+    setError("oldpass", "Please enter your current password.");
+    ok = false;
+  }
+  if (newPass.length < 6 || !/[0-9]/.test(newPass)) {
+    setError("newpass", "New password: at least 6 characters and one number.");
+    ok = false;
+  }
+  if (newPass !== "" && newPass === oldPass) {
+    setError("newpass", "New password must be different from the current one.");
+    ok = false;
+  }
+  if (confirm !== newPass) {
+    setError("confirm", "Passwords do not match.");
+    ok = false;
+  }
+  return ok;
+}
