@@ -54,3 +54,13 @@ CREATE TABLE ActivityLogs (
     CONSTRAINT FK_ActivityLogs_Files FOREIGN KEY (FileId) REFERENCES Files(FileId)
 );
 GO
+
+-- Feedback: user experience and suggestions, read by the admin
+CREATE TABLE Feedback (
+    FeedbackId  INT IDENTITY(1,1) PRIMARY KEY,
+    UserId      INT           NOT NULL,
+    Message     NVARCHAR(1000) NOT NULL,
+    SubmittedAt DATETIME      NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT FK_Feedback_Users FOREIGN KEY (UserId) REFERENCES Users(UserId)
+);
+GO
