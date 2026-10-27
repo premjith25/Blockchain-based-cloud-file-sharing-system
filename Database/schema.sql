@@ -64,3 +64,15 @@ CREATE TABLE Feedback (
     CONSTRAINT FK_Feedback_Users FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 GO
+
+-- Blocks: the blockchain. Stores only file hashes, never the files themselves
+CREATE TABLE Blocks (
+    BlockIndex   INT IDENTITY(1,1) PRIMARY KEY,
+    FileId       INT           NOT NULL,
+    FileHash     NVARCHAR(64)  NOT NULL,
+    PreviousHash NVARCHAR(64)  NOT NULL,
+    CurrentHash  NVARCHAR(64)  NOT NULL,
+    CreatedAt    DATETIME      NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT FK_Blocks_Files FOREIGN KEY (FileId) REFERENCES Files(FileId)
+);
+GO
