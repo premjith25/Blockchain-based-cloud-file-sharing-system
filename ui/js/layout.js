@@ -1,6 +1,7 @@
 (function () {
   // Each page says which menu it needs: <body data-role="user"> or "admin"
   var role = document.body.getAttribute("data-role") || "user";
+  var isPublic = role === "public";
 
   var menus = {
     user: [
@@ -25,7 +26,7 @@
   // Highlight the link of the page you are currently on
   var current = location.pathname.split("/").pop();
 
-  var links = menus[role].map(function (item) {
+  var links = (menus[role] || []).map(function (item) {
     var cls = item[0] === current ? ' class="active"' : "";
     return '<a href="' + item[0] + '"' + cls + ">" + item[1] + "</a>";
   }).join("");
@@ -36,9 +37,10 @@
   var header =
     '<header class="topbar">' +
       '<div class="brand">' + title + "</div>" +
-      '<nav class="nav">' + links + "</nav>" +
-      '<div class="userbox">Hello, ' + username +
-        ' <a href="' + logoutPage + '" id="logoutLink">Logout</a></div>' +
+      (isPublic ? "" :
+        '<nav class="nav">' + links + "</nav>" +
+        '<div class="userbox">Hello, ' + username +
+          ' <a href="' + logoutPage + '" id="logoutLink">Logout</a></div>') +
     "</header>";
 
   var footer =
@@ -48,7 +50,10 @@
   document.body.insertAdjacentHTML("beforeend", footer);
 
   // Logout clears the stored name
-  document.getElementById("logoutLink").addEventListener("click", function () {
-    sessionStorage.removeItem("username");
-  });
+  var logoutLink = document.getElementById("logoutLink");
+  if (logoutLink) {
+    logoutLink.addEventListener("click", function () {
+      sessionStorage.removeItem("username");
+    });
+  }
 })();
