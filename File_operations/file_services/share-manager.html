@@ -1,0 +1,37 @@
+<div style="max-width: 900px; margin: 30px auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <h3>Manage File Sharing & Access Control</h3>
+    
+    <!-- Share Form -->
+    <form action="ShareHandler.aspx" method="POST" style="margin-top: 15px; margin-bottom: 25px;">
+        <label style="font-weight: 600; display: block; margin-bottom: 5px;">Select File ID to Share:</label>
+        <input type="number" name="fileId" placeholder="Enter File ID" required style="padding: 8px; width: 100%; max-width: 300px; margin-bottom: 10px; display: block; border: 1px solid #cbd5e1; border-radius: 4px;">
+        
+        <label style="font-weight: 600; display: block; margin-bottom: 5px;">Recipient Username / User ID:</label>
+        <input type="text" name="targetUser" placeholder="Enter recipient username" required style="padding: 8px; width: 100%; max-width: 300px; margin-bottom: 15px; display: block; border: 1px solid #cbd5e1; border-radius: 4px;">
+        
+        <button type="submit" style="background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Grant Access</button>
+    </form>
+
+    <!-- Active Shares Table -->
+    <h4>Currently Shared With Others</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="background: #e2e8f0; text-align: left;">
+                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">Share ID</th>
+                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">File Name</th>
+                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">Shared With</th>
+                <th style="padding: 10px; border-bottom: 1px solid #cbd5e1;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">#102</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">SecureReport.pdf</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Teammate_Peer</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">
+                    <button style="background: #dc2626; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Revoke Access</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

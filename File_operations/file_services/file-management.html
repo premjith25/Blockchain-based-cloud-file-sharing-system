@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Management - Cloud File Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="font-family: Arial, sans-serif; background: #f8fafc; margin: 0; padding: 20px;">
+    <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h2>My Uploaded Files</h2>
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 20px;">
+
+        <!-- Upload Form -->
+        <form action="FileUploadHandler.aspx" method="POST" enctype="multipart/form-data" style="background: #f1f5f9; padding: 20px; border-radius: 6px; margin-bottom: 25px;">
+            <h3>Upload New File (Encrypted & Secured on Blockchain)</h3>
+            <input type="file" name="fileUploadControl" required style="margin: 10px 0; display: block;">
+            <button type="submit" style="background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Upload & Secure</button>
+        </form>
+
+        <!-- Files List Table -->
+        <h3>Active File Vault</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <thead>
+                <tr style="background: #e2e8f0; text-align: left;">
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e1;">File Name</th>
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e1;">Upload Date</th>
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e1;">Tamper Status</th>
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e1;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">SecureReport.pdf</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">2026-10-27</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;"><span style="color: #16a34a; font-weight: bold;">Verified</span></td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">
+                        <button style="background: #16a34a; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-right: 5px;">Download</button>
+                        <button style="background: #dc2626; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
