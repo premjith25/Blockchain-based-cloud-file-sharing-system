@@ -30,3 +30,15 @@ CREATE TABLE Files (
     CONSTRAINT FK_Files_Users FOREIGN KEY (OwnerId) REFERENCES Users(UserId)
 );
 GO
+
+-- FileShares: who a file is shared with (revoking just switches IsActive to 0)
+CREATE TABLE FileShares (
+    ShareId          INT IDENTITY(1,1) PRIMARY KEY,
+    FileId           INT      NOT NULL,
+    SharedWithUserId INT      NOT NULL,
+    SharedAt         DATETIME NOT NULL DEFAULT GETDATE(),
+    IsActive         BIT      NOT NULL DEFAULT 1,
+    CONSTRAINT FK_FileShares_Files FOREIGN KEY (FileId) REFERENCES Files(FileId),
+    CONSTRAINT FK_FileShares_Users FOREIGN KEY (SharedWithUserId) REFERENCES Users(UserId)
+);
+GO
