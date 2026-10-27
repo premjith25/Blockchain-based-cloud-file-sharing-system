@@ -76,3 +76,9 @@ CREATE TABLE Blocks (
     CONSTRAINT FK_Blocks_Files FOREIGN KEY (FileId) REFERENCES Files(FileId)
 );
 GO
+
+-- Default admin account (login: admin@fileshare.com, password: Admin@123)
+-- PasswordHash is SHA-256 for now. Update it if the team picks a different hashing method.
+INSERT INTO Users (FullName, Email, PasswordHash, Role)
+VALUES ('System Admin', 'admin@fileshare.com', 'e86f78a8a3caf0b60d8e74e5942aa6d86dc150cd3c03338aef25b7d2d7e3acc7', 'Admin');
+GO
