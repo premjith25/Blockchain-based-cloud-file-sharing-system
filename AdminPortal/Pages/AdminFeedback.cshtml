@@ -1,0 +1,31 @@
+@page
+@model AdminFeedbackModel
+@{
+    ViewData["Title"] = "User Feedback";
+}
+<h1>User Feedback</h1>
+<p><a asp-page="AdminHome">Back to admin home</a></p>
+@if (Model.Items.Count == 0)
+{
+    <p>No feedback received yet.</p>
+}
+else
+{
+    <table border="1" cellpadding="6">
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Message</th>
+            <th>Sent On</th>
+        </tr>
+        @foreach (var f in Model.Items)
+        {
+            <tr>
+                <td>@f.FeedbackId</td>
+                <td>@f.UserName</td>
+                <td>@f.Message</td>
+                <td>@f.SubmittedAt.ToString("dd MMM yyyy HH:mm")</td>
+            </tr>
+        }
+    </table>
+}

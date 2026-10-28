@@ -1,0 +1,76 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AdminPortal
+build_property.RootNamespace = AdminPortal
+build_property.ProjectDir = /Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/AdminFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW5GZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/AdminHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW5Ib21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/AdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW5Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/AdminLogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW5Mb2dzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/AdminTampered.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW5UYW1wZXJlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/AdminUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW5Vc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/madangowda/Desktop/Blockchain-based-cloud-file-sharing-system/AdminPortal/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-95r3hwiwgz

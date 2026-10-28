@@ -1,0 +1,26 @@
+@page
+@model AdminUsersModel
+@{
+    ViewData["Title"] = "All Users";
+}
+<h1>All Registered Users</h1>
+<p><a asp-page="AdminHome">Back to admin home</a></p>
+<table border="1" cellpadding="6">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Registered On</th>
+    </tr>
+    @foreach (var u in Model.Users)
+    {
+        <tr>
+            <td>@u.UserId</td>
+            <td>@u.FullName</td>
+            <td>@u.Email</td>
+            <td>@u.Role</td>
+            <td>@u.CreatedAt.ToString("dd MMM yyyy HH:mm")</td>
+        </tr>
+    }
+</table>

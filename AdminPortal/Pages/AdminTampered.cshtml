@@ -1,0 +1,33 @@
+@page
+@model AdminTamperedModel
+@{
+    ViewData["Title"] = "Tampered Files";
+}
+<h1>Tampered Files</h1>
+<p><a asp-page="AdminHome">Back to admin home</a></p>
+@if (Model.Files.Count == 0)
+{
+    <p>No tampered files found.</p>
+}
+else
+{
+    <table border="1" cellpadding="6">
+        <tr>
+            <th>File ID</th>
+            <th>File Name</th>
+            <th>Owner</th>
+            <th>Uploaded On</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var f in Model.Files)
+        {
+            <tr>
+                <td>@f.FileId</td>
+                <td>@f.FileName</td>
+                <td>@f.OwnerName</td>
+                <td>@f.UploadedAt.ToString("dd MMM yyyy HH:mm")</td>
+                <td style="color:red"><b>Tampered</b></td>
+            </tr>
+        }
+    </table>
+}

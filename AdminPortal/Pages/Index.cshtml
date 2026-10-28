@@ -1,0 +1,19 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Database test";
+}
+<h1>Database connection test</h1>
+@if (Model.Error != null)
+{
+    <p style="color:red">@Model.Error</p>
+}
+else
+{
+    <ul>
+        @foreach (var u in Model.Users)
+        {
+            <li>@u</li>
+        }
+    </ul>
+}

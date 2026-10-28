@@ -1,0 +1,16 @@
+@page
+@model AdminHomeModel
+@{
+    ViewData["Title"] = "Admin Home";
+}
+<h1>Welcome, @Model.AdminName</h1>
+<p>You are logged in as admin.</p>
+<ul>
+    <li><a asp-page="AdminUsers">View all users</a></li>
+    <li><a asp-page="AdminTampered">View tampered files</a></li>
+    <li><a asp-page="AdminLogs">View activity logs</a></li>
+    <li><a asp-page="AdminFeedback">View user feedback</a></li>
+</ul>
+<form method="post" asp-page-handler="Logout">
+    <button type="submit">Logout</button>
+</form>
